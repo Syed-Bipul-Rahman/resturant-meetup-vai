@@ -19,19 +19,15 @@ export default function Navbar() {
         { title: "Home", href: "/" },
         {
             title: "Services",
-            href: "services",
-        },
-        {
-            title: "Blogs",
-            href: "/blogs"
+            href: "#services",
         },
         {
             title: "About us",
-            href: "about-us",
+            href: "#about-us",
         },
         {
-            title: "Contact us",
-            href: "contact-us"
+            title: "FAQ",
+            href: "#faq"
         },
     ];
 
@@ -46,8 +42,8 @@ export default function Navbar() {
         <header
             className={`fixed top-0 left-0 w-full z-10 py-4 transition-all duration-300
             ${isScroll
-                    ? "bg-white bg-opacity-75 backdrop-blur-md text-black shadow-lg"
-                    : "bg-black lg:bg-transparent lg:py-8 text-black"
+                    ? "bg-white/75 backdrop-blur-md text-black shadow-lg"
+                    : "bg-transparent lg:py-8 text-black"
                 }`}
         >
             <div className="container mx-auto flex items-center justify-between px-4">
@@ -87,7 +83,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Button */}
                 <div className="lg:hidden">
-                    <button className="cursor-pointer text-white" onClick={() => toggleMenu()}>
+                    <button className="cursor-pointer hover:text-[#2571ff] [transition:0.3s] text-black" onClick={() => toggleMenu()}>
                         <RiMenu3Fill size={24} />
                     </button>
                 </div>
@@ -109,7 +105,7 @@ export default function Navbar() {
             >
                 <div className="flex justify-end items-center py-3 pr-5">
                     <button onClick={toggleMenu}>
-                        <RiCloseLargeFill className="border border-[#2571ff] rounded-full w-8 h-8 p-[6px]" />
+                        <RiCloseLargeFill className="border border-[#2571ff] rounded-full w-8 h-8 p-[6px] cursor-pointer hover:text-[#2571ff] [transition:0.3s]" />
                     </button>
                 </div>
                 <nav
@@ -133,12 +129,12 @@ export default function Navbar() {
                             />
                         </Link>
                     ))}
+                    <button
+                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] px-5 w-max"
+                    >
+                        Download App
+                    </button>
                 </nav>
-                <button
-                    className="px-5 py-2 rounded-md cursor-pointer text-whitetext-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max"
-                >
-                    Download App
-                </button>
             </aside>
         </header>
     );

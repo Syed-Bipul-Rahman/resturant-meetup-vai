@@ -6,7 +6,7 @@ export default function HeroSection() {
     return (
         <div className="container mx-auto p-4">
             <div className=" flex items-center flex-col lg:flex-row justify-center lg:gap-20 lg:pt-28 py-20 lg:pb-[156px] ">
-                <div className="flex items-start justify-start flex-col relative pt-12 xl:w-[666px] lg:w-auto">
+                <div className="flex items-start justify-start flex-col relative xl:w-[666px] lg:w-auto">
                     <Title
                         title="Where Imagination Meets Mastery!"
                         className='text-[#171717]'
