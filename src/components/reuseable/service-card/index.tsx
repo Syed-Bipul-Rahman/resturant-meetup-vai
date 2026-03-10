@@ -6,9 +6,7 @@ import { JSX, useState } from "react";
 export default function ServiceCard({ title, description, image }: IServiceCardProps): JSX.Element {
     const [hovered, setHovered] = useState<boolean>(false);
     return (
-        <div
-            className="bg-white rounded-md border border-gray-200 overflow-hidden flex flex-col w-full cursor-pointer "
-        >
+        <div className="bg-white rounded-md border border-gray-200 overflow-hidden flex flex-col w-full cursor-pointer ">
             <div className="w-full h-56 overflow-hidden">
                 <img
                     src={image}
