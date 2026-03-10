@@ -10,8 +10,8 @@ export default function Logo({ isScroll = false }) {
                 width={0}
                 height={0}
                 alt="Logo"
-                className={`transition-all duration-300 ${isScroll ? "lg:w-[100px] h-11" : " h-10 lg:w-[80px]"
-                    } w-32`}
+                className={`transition-all duration-300 ${isScroll ? "lg:w-10 h-10" : " lg:w-12 h-12 "
+                    }`}
             />
         </div>
     )

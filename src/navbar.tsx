@@ -44,10 +44,10 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-10 py-4 transition-all duration-300 text-black 
+            className={`fixed top-0 left-0 w-full z-10 py-4 transition-all duration-300
             ${isScroll
-                    ? "bg-black  bg-opacity-75 backdrop-blur-md"
-                    : "bg-black lg:bg-transparent lg:py-8"
+                    ? "bg-white bg-opacity-75 backdrop-blur-md text-black shadow-lg"
+                    : "bg-black lg:bg-transparent lg:py-8 text-black"
                 }`}
         >
             <div className="container mx-auto flex items-center justify-between px-4">
@@ -60,7 +60,7 @@ export default function Navbar() {
                         <Link
                             key={index}
                             href={link.href || "#"}
-                            className="relative text-white font-medium pb-2 group"
+                            className="relative font-medium pb-2 group"
                         >
                             {link.title}
                             <span
@@ -78,14 +78,9 @@ export default function Navbar() {
                 {/* Desktop Buttons */}
                 <div className="hidden lg:flex gap-8">
                     <button
-                        className="theme-btn px-4 py-1 rounded-md text-white bg-[#2571ff] font-medium"
+                        className="px-5 py-2 rounded-md cursor-pointer text-whitetext-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max"
                     >
-                        Sign up
-                    </button>
-                    <button
-                        className="theme-btn  px-4 py-1 rounded-md text-white bg-gradient-to-b from-[#51127f] to-[#d70a84] font-medium"
-                    >
-                        Login
+                        Download App
                     </button>
                 </div>
 
@@ -140,16 +135,9 @@ export default function Navbar() {
                     ))}
                 </nav>
                 <button
-                    className="theme-btn px-4 py-2 mx-3 rounded text-white my-5 bg-[#2571ff] font-medium"
-                    onClick={() => (window.location.href = 'https://pub.perkox.com/auth/publisher-register')}
+                    className="px-5 py-2 rounded-md cursor-pointer text-whitetext-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max"
                 >
-                    Sign up
-                </button>
-                <button
-                    className="theme-btn px-4 py-2 mx-3 rounded text-white bg-gradient-to-b from-[#51127f] to-[#d70a84] font-medium"
-                    onClick={() => (window.location.href = 'https://pub.perkox.com/auth/login')}
-                >
-                    Login
+                    Download App
                 </button>
             </aside>
         </header>
