@@ -11,3 +11,16 @@ export interface ITitleProps {
     descriptionClass?: string;
     visible?: boolean;
 }
+
+export interface IService {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+}
+
+export interface IServiceCardProps {
+    title: string;
+    description: string;
+    image: string;
+}

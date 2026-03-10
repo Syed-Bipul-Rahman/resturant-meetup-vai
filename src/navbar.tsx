@@ -74,7 +74,7 @@ export default function Navbar() {
                 {/* Desktop Buttons */}
                 <div className="hidden lg:flex gap-8">
                     <button
-                        className="px-5 py-2 rounded-md cursor-pointer text-whitetext-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max"
+                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] w-max"
                     >
                         Download App
                     </button>
@@ -130,7 +130,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <button
-                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] px-5 w-max"
+                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] w-max"
                     >
                         Download App
                     </button>
