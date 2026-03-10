@@ -11,7 +11,6 @@ export default function Navbar() {
     const [isScroll, setIsScroll] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Toggle menu visibility
     const toggleMenu = () => setMenuOpen((prev) => !prev);
 
     // Navigation links
@@ -31,7 +30,7 @@ export default function Navbar() {
         },
     ];
 
-    // Handle scroll event to toggle sticky navbar
+
     useEffect(() => {
         const handleScroll = () => setIsScroll(window.scrollY > 0);
         window.addEventListener("scroll", handleScroll);
@@ -49,8 +48,7 @@ export default function Navbar() {
             <div className="container mx-auto flex items-center justify-between px-4">
                 {/* Logo */}
                 <Logo isScroll={isScroll} />
-
-                {/* Desktop Navigation */}
+                {/* menu  */}
                 <nav className="hidden lg:flex space-x-7">
                     {navLinks.map((link, index) => (
                         <Link
@@ -71,7 +69,6 @@ export default function Navbar() {
                     ))}
                 </nav>
 
-                {/* Desktop Buttons */}
                 <div className="hidden lg:flex gap-8">
                     <button
                         className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] w-max"
@@ -80,8 +77,6 @@ export default function Navbar() {
                     </button>
                 </div>
 
-
-                {/* Mobile Menu Button */}
                 <div className="lg:hidden">
                     <button className="cursor-pointer hover:text-[#2571ff] [transition:0.3s] text-black" onClick={() => toggleMenu()}>
                         <RiMenu3Fill size={24} />
