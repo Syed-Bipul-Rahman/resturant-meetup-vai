@@ -1,10 +1,10 @@
 import Image from "next/image"
 import logoImage from "../../../assets/logo.png"
 
-export default function Logo({ isScroll = false }) {
+export default function Logo({ className = "w-32", isScroll = false }: { className?: string, isScroll?: boolean }) {
     return (
-        <div className={`transition-all duration-300 ${isScroll ? "lg:w-[160px]" : "lg:w-[220px]"
-            } w-32`}>
+        <div className={`${className}transition-all duration-300 ${isScroll ? "lg:w-[160px]" : ""
+            }`}>
             <Image
                 src={logoImage}
                 width={0}

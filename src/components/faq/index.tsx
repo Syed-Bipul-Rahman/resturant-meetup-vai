@@ -27,54 +27,60 @@ export default function FAQSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-24 relative max-w-3xl mx-auto px-6">
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 20
-                }}
-                className="text-center mb-16"
-            >
-                <Title
-                    title="Frequently Asked Questions"
-                    description="Everything you need to know about RestoMeet."
-                />
-            </motion.div>
+        <section className="relative overflow-hidden">
+            <div className="py-24 max-w-3xl mx-auto px-6">
+                <div className="absolute w-[520px] h-[720px] -bottom-40 -right-82 hero-gradient -z-10"></div>
 
-            <div className="space-y-4">
-                {faqs.map((faq, index) => (
-                    <div key={index} className="border border-slate-200 rounded-md overflow-hidden bg-primary/5">
-                        <button
-                            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                            className="w-full flex items-center justify-between p-6 text-left hover:bg-primary/10 transition-colors cursor-pointer"
-                        >
-                            <span className="font-bold text-lg">{faq.question}</span>
-                            <FiChevronDown
-                                className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
-                                size={20}
-                            />
-                        </button>
-                        <AnimatePresence>
-                            {openIndex === index && (
-                                <motion.div
-                                    initial={{ height: 0, opacity: 0 }}
-                                    animate={{ height: 'auto', opacity: 1 }}
-                                    exit={{ height: 0, opacity: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <div className="px-6 pb-6 text-slate-400 leading-relaxed">
-                                        {faq.answer}
-                                    </div>
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
-                    </div>
-                ))}
+                <div className="absolute w-[520px] h-[720px] top-0 -left-82 purple-gradient -z-10"></div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 20
+                    }}
+                    className="text-center mb-16"
+                >
+                    <Title
+                        title="Frequently Asked Questions"
+                        description="Everything you need to know about RestoMeet."
+                    />
+                </motion.div>
+
+                <div className="space-y-4">
+                    {faqs.map((faq, index) => (
+                        <div key={index} className="border border-slate-200 rounded-md overflow-hidden bg-primary/5">
+                            <button
+                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                className="w-full flex items-center justify-between p-6 text-left hover:bg-primary/10 transition-colors cursor-pointer"
+                            >
+                                <span className="font-bold text-lg">{faq.question}</span>
+                                <FiChevronDown
+                                    className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
+                                    size={20}
+                                />
+                            </button>
+                            <AnimatePresence>
+                                {openIndex === index && (
+                                    <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <div className="px-6 pb-6 text-slate-500 leading-relaxed">
+                                            {faq.answer}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </section>
+        </section >
     );
 }
