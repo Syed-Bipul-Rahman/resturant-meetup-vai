@@ -3,10 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #2571ff;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-primary: var(--primary);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -27,7 +29,7 @@ body {
 
 
 .hero-gradient {
-  background: radial-gradient(rgba(87, 204, 116, 0.61), transparent 70%);
+  background: radial-gradient(rgba(55, 105, 198, 0.65), transparent 60%);
   background-repeat: no-repeat;
 
 

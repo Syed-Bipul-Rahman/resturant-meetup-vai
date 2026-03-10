@@ -29,6 +29,7 @@ export default function FAQSection() {
     return (
         <section className="relative overflow-hidden">
             <div className="py-24 max-w-3xl mx-auto px-6">
+
                 <div className="absolute w-[520px] h-[720px] -bottom-40 -right-82 hero-gradient -z-10"></div>
 
                 <div className="absolute w-[520px] h-[720px] top-0 -left-82 purple-gradient -z-10"></div>

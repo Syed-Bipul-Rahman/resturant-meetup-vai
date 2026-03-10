@@ -74,7 +74,7 @@ export default function CustomerFeedbackSection() {
 
     return (
         <section className="py-16 md:py-24 bg-[#f8f7fb]">
-            <div className="container mx-auto px-4 md:px-0">
+            <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <div className="lg:col-span-4 max-w-sm">
                         <h2 className="text-3xl md:text-4xl font-bold text-[#2D3142] mb-4">

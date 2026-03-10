@@ -20,13 +20,14 @@ export default function Navbar() {
             title: "Services",
             href: "#services",
         },
-        {
-            title: "About us",
-            href: "#about-us",
-        },
+
         {
             title: "FAQ",
             href: "#faq"
+        },
+        {
+            title: "About us",
+            href: "/about-us",
         },
     ];
 
