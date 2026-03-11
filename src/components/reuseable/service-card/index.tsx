@@ -25,9 +25,9 @@ export default function ServiceCard({ title, description, image }: IServiceCardP
                 </p>
 
                 <button
-                    className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] w-max">
+                    className="px-5 py-2 flex items-center gap-2 group rounded-md cursor-pointer text-white text-sm bg-primary hover:bg-primary/90 [transition:0.3s] w-max">
                     Read More
-                    <span className="text-base">→</span>
+                    <span className="text-base group-hover:!translate-x-2 transition-transform duration-300">→</span>
                 </button>
             </div>
         </div>

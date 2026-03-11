@@ -10,7 +10,7 @@ export default function Title({ title, description, className = 'text-[#171717]'
                 visible &&
                 <div className='flex items-center justify-center gap-1'>
                     <span className='w-1 bg-black h-[3px]'></span>
-                    <span className='w-[25px] bg-[#2571ff] h-[3px]'></span>
+                    <span className='w-[25px] bg-primary h-[3px]'></span>
                     <span className='w-1 bg-black h-[3px]'></span>
                 </div>
             }

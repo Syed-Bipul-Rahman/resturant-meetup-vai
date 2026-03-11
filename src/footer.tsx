@@ -25,7 +25,7 @@ export default function Footer() {
                             <Link
                                 key={i}
                                 href="#"
-                                className="w-10 h-10 rounded-full bg-[#2571ff]/10 flex items-center justify-center text-[#2571ff]  hover:bg-[#2571ff] hover:text-white transition-colors"
+                                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary  hover:bg-primary hover:text-white transition-colors"
                             >
                                 <Icon size={20} />
                             </Link>
@@ -57,11 +57,11 @@ export default function Footer() {
                     </p>
                     <div className="flex gap-2">
                         <input
-                            className="border border-[#2571ff]/20 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#2571ff]/50 placeholder:text-slate-400"
+                            className="border border-primary/20 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-primary/50 placeholder:text-slate-400"
                             placeholder="Email address"
                             type="email"
                         />
-                        <button className="bg-[#2571ff] text-white p-2 rounded-lg cursor-pointer hover:bg-[#2571ff]/90 transition-colors">
+                        <button className="bg-primary text-white p-2 rounded-lg cursor-pointer hover:bg-primary/90 transition-colors">
                             <FaArrowRight size={20} />
                         </button>
                     </div>

@@ -6,13 +6,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import user_1 from "../../assets/user-1.jpg";
+import user_2 from "../../assets/user-2.png";
+import user_3 from "../../assets/user-3.svg";
 
 const testimonials = [
     {
         id: 1,
         name: "Craig Bator",
         role: "Food Blogger",
-        image: "/avatar_craig.png",
+        image: user_1,
         rating: 5,
         feedback:
             "Chef Marilyn's signature curry is hands-down the best I've ever had. The flavors are bold and unforgettable!",
@@ -21,7 +24,7 @@ const testimonials = [
         id: 2,
         name: "Lindsey Saris",
         role: "Travel Chef Reviewer",
-        image: "/avatar_lindsey.png",
+        image: user_2,
         rating: 4.5,
         feedback:
             "Takahiro's sushi is pure perfection. So fresh, delicate, and beautifully presented — a five-star experience.",
@@ -30,7 +33,7 @@ const testimonials = [
         id: 3,
         name: "Craig Bator",
         role: "Food Blogger",
-        image: "/avatar_craig.png",
+        image: user_3,
         rating: 5,
         feedback:
             "Chef Marilyn's signature curry is hands-down the best I've ever had. The flavors are bold and unforgettable!",
@@ -39,7 +42,7 @@ const testimonials = [
         id: 4,
         name: "Lindsey Saris",
         role: "Travel Chef Reviewer",
-        image: "/avatar_lindsey.png",
+        image: user_2,
         rating: 4,
         feedback:
             "Takahiro's sushi is pure perfection. So fresh, delicate, and beautifully presented — a five-star experience.",
@@ -86,14 +89,14 @@ export default function CustomerFeedbackSection() {
                         <div className="flex gap-4">
                             <button
                                 onClick={() => sliderRef.current?.slickPrev()}
-                                className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-[#2571ff]/90 hover:text-white [transition:0.3s] cursor-pointer"
+                                className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary/90 hover:text-white [transition:0.3s] cursor-pointer"
                                 aria-label="Previous slide"
                             >
                                 <FaChevronLeft size={16} />
                             </button>
                             <button
                                 onClick={() => sliderRef.current?.slickNext()}
-                                className="w-10 h-10 flex items-center justify-center rounded-md bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] text-white hover:bg-[#7C3AED] cursor-pointer"
+                                className="w-10 h-10 flex items-center justify-center rounded-md bg-primary hover:bg-primary/90 [transition:0.3s] text-white hover:bg-primary cursor-pointer"
                                 aria-label="Next slide"
                             >
                                 <FaChevronRight size={16} />

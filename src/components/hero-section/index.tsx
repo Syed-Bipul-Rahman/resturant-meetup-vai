@@ -13,7 +13,7 @@ export default function HeroSection() {
                         visible={false}
                         description="Step into a world of boundless creativity with Artifiex. Empowering artists, visionaries, and creators to craft extraordinary experiences, we provide the ultimate canvas for your ideas to shine. Let your masterpiece begin here."
                     />
-                    <button className='text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max mt-5 lg:mt-[60px]'>GET STARTED</button>
+                    <button className='text-sm bg-primary hover:bg-primary/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max mt-5 lg:mt-[60px]'>GET STARTED</button>
                 </div>
                 <div className="flex-1 w-full p-2">
                     <div className="relative top-10 overflow-hidden">

@@ -53,10 +53,10 @@ export default function FAQSection() {
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="border border-slate-200 rounded-md overflow-hidden bg-primary/5">
+                        <div key={index} className="border border-slate-200 rounded-md overflow-hidden bg-white hover:border-primary/50 ![transition:0.3s]">
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="w-full flex items-center justify-between p-6 text-left hover:bg-primary/10 transition-colors cursor-pointer"
+                                className="w-full flex items-center justify-between p-6 text-left transition-colors cursor-pointer"
                             >
                                 <span className="font-bold text-lg">{faq.question}</span>
                                 <FiChevronDown
