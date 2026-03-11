@@ -1,12 +1,10 @@
 "use client";
 
-import Title from "@/src/components/reuseable/title";
-import { FaBullseye, FaHistory, FaHeart, FaUsers, FaUtensils, FaGlobe } from "react-icons/fa";
-import Image from "next/image";
+import { FaUsers, FaUtensils, FaGlobe } from "react-icons/fa";
 import { useAboutUsService } from "@/src/hooks/use-common";
 
 
-export default function AboutUsSection() {
+export default function AboutUsContent() {
     const stats = [
         { label: "Successful Meetups", value: "500+", icon: <FaUtensils size={24} /> },
         { label: "Active Members", value: "10k+", icon: <FaUsers size={24} /> },
@@ -16,7 +14,7 @@ export default function AboutUsSection() {
     const { abouts, loading } = useAboutUsService();
 
     return (
-        <section className="container mx-auto py-12 bg-white px-4">
+        <div className="container mx-auto py-12 bg-white px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {stats.map((stat, index) => (
                     <div key={index} className="flex flex-col items-center p-6 border border-gray-100 rounded-md bg-gray-50/50">
@@ -35,6 +33,6 @@ export default function AboutUsSection() {
                     <div className='about-content' dangerouslySetInnerHTML={{ __html: abouts[0]?.description ?? "" }} />
                 )}
             </div>
-        </section>
+        </div>
     )
 }
