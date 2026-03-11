@@ -1,6 +1,7 @@
 import { IService } from "@/src/interface";
 import Title from "../reuseable/title";
 import ServiceCard from "../reuseable/service-card";
+import ScrollReveal from "../animations/scroll-reveal";
 
 export default function ServicesSection() {
     const services: IService[] = [
@@ -38,8 +39,14 @@ export default function ServicesSection() {
                 descriptionClass="text-center lg:w-[55%] mx-auto"
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                {services.map((service: IService) => (
-                    <ServiceCard key={service.id} {...service} />
+                {services.map((service: IService, index: number) => (
+                    <ScrollReveal
+                        key={service.id}
+                        direction="fade-up"
+                        delay={index * 0.15}
+                    >
+                        <ServiceCard {...service} />
+                    </ScrollReveal>
                 ))}
             </div>
         </section >

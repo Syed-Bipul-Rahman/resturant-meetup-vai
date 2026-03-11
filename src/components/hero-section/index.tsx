@@ -17,7 +17,7 @@ export default function HeroSection() {
                     <button className='text-sm bg-primary hover:bg-primary/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max mt-5 lg:mt-[60px]'>GET STARTED</button>
                 </div>
                 <div className="flex-1 w-full p-2">
-                    <ScrollReveal>
+                    <ScrollReveal direction="fade-left">
                         <div className="relative top-10 overflow-hidden">
                             <Image
                                 src='https://img.freepik.com/premium-psd/mobile-app-screen-mockup_772836-1135.jpg'

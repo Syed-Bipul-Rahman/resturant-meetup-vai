@@ -9,6 +9,7 @@ import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import user_1 from "../../assets/user-1.jpg";
 import user_2 from "../../assets/user-2.png";
 import user_3 from "../../assets/user-3.svg";
+import ScrollReveal from "../animations/scroll-reveal";
 
 const testimonials = [
     {
@@ -80,28 +81,30 @@ export default function CustomerFeedbackSection() {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <div className="lg:col-span-4 max-w-sm">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#2D3142] mb-4">
-                            Customers Feedback
-                        </h2>
-                        <p className="text-[#6C757D] text-lg mb-8">
-                            From career changes to dream jobs, here's how FlyonUI helped.
-                        </p>
-                        <div className="flex gap-4">
-                            <button
-                                onClick={() => sliderRef.current?.slickPrev()}
-                                className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary/90 hover:text-white [transition:0.3s] cursor-pointer"
-                                aria-label="Previous slide"
-                            >
-                                <FaChevronLeft size={16} />
-                            </button>
-                            <button
-                                onClick={() => sliderRef.current?.slickNext()}
-                                className="w-10 h-10 flex items-center justify-center rounded-md bg-primary hover:bg-primary/90 [transition:0.3s] text-white hover:bg-primary cursor-pointer"
-                                aria-label="Next slide"
-                            >
-                                <FaChevronRight size={16} />
-                            </button>
-                        </div>
+                        <ScrollReveal>
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#2D3142] mb-4">
+                                Customers Feedback
+                            </h2>
+                            <p className="text-[#6C757D] text-lg mb-8">
+                                From career changes to dream jobs, here's how FlyonUI helped.
+                            </p>
+                            <div className="flex gap-4">
+                                <button
+                                    onClick={() => sliderRef.current?.slickPrev()}
+                                    className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary/90 hover:text-white [transition:0.3s] cursor-pointer"
+                                    aria-label="Previous slide"
+                                >
+                                    <FaChevronLeft size={16} />
+                                </button>
+                                <button
+                                    onClick={() => sliderRef.current?.slickNext()}
+                                    className="w-10 h-10 flex items-center justify-center rounded-md bg-primary hover:bg-primary/90 [transition:0.3s] text-white hover:bg-primary cursor-pointer"
+                                    aria-label="Next slide"
+                                >
+                                    <FaChevronRight size={16} />
+                                </button>
+                            </div>
+                        </ScrollReveal>
                     </div>
 
                     <div className="lg:col-span-8 -mx-4">
@@ -149,6 +152,6 @@ export default function CustomerFeedbackSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

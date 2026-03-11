@@ -15,18 +15,10 @@ export default function Home() {
         <ScrollReveal>
           <MenuSection />
         </ScrollReveal>
-        <ScrollReveal>
-          <ServicesSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <HowWorkSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <CustomerFeedbackSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <FAQSection />
-        </ScrollReveal>
+        <ServicesSection />
+        <HowWorkSection />
+        <CustomerFeedbackSection />
+        <FAQSection />
       </main>
     </LenisProvider>
   );

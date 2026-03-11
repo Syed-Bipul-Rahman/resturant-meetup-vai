@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronDown } from "react-icons/fi";
 import Title from '../reuseable/title';
+import ScrollReveal from '../animations/scroll-reveal';
 const faqs = [
     {
         question: 'How do I join a meetup?',
@@ -34,24 +35,15 @@ export default function FAQSection() {
 
                 <div className="absolute w-[520px] h-[720px] top-0 -left-82 purple-gradient -z-10"></div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 100,
-                        damping: 20
-                    }}
-                    className="text-center mb-16"
-                >
+                <ScrollReveal>
                     <Title
                         title="Frequently Asked Questions"
                         description="Everything you need to know about RestoMeet."
+                        className="text-center"
+                        descriptionClass="text-center"
                     />
-                </motion.div>
-
-                <div className="space-y-4">
+                </ScrollReveal>
+                <div className="space-y-4 mt-12">
                     {faqs.map((faq, index) => (
                         <div key={index} className="border border-slate-200 rounded-md overflow-hidden bg-white hover:border-primary/50 ![transition:0.3s]">
                             <button
