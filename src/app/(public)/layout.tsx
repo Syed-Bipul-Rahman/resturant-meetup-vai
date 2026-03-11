@@ -1,5 +1,5 @@
-import Navbar from "../../navbar";
-import Footer from "../../footer";
+import Navbar from "@/src/navbar";
+import Footer from "@/src/footer";
 
 export default function MarketingLayout({
   children,

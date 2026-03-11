@@ -4,17 +4,30 @@ import HeroSection from "@/src/components/hero-section";
 import HowWorkSection from "@/src/components/how-work";
 import MenuSection from "@/src/components/menu-section";
 import ServicesSection from "@/src/components/services";
-
+import LenisProvider from "@/src/components/animations/lenis-provider";
+import ScrollReveal from "@/src/components/animations/scroll-reveal";
 
 export default function Home() {
   return (
-    <main className="">
-      <HeroSection />
-      <MenuSection />
-      <ServicesSection />
-      <HowWorkSection />
-      <CustomerFeedbackSection />
-      <FAQSection />
-    </main>
+    <LenisProvider>
+      <main className="">
+        <HeroSection />
+        <ScrollReveal>
+          <MenuSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ServicesSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <HowWorkSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CustomerFeedbackSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FAQSection />
+        </ScrollReveal>
+      </main>
+    </LenisProvider>
   );
 }

@@ -1,6 +1,7 @@
 import background from "@/assets/banner.webp"
 import Title from '../reuseable/title'
 import Image from 'next/image'
+import ScrollReveal from "../animations/scroll-reveal"
 
 export default function HeroSection() {
     return (
@@ -16,16 +17,18 @@ export default function HeroSection() {
                     <button className='text-sm bg-primary hover:bg-primary/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max mt-5 lg:mt-[60px]'>GET STARTED</button>
                 </div>
                 <div className="flex-1 w-full p-2">
-                    <div className="relative top-10 overflow-hidden">
-                        <Image
-                            src='https://img.freepik.com/premium-psd/mobile-app-screen-mockup_772836-1135.jpg'
-                            alt="hero image"
-                            className="object-cover"
-                            layout="responsive"
-                            height={0}
-                            width={0}
-                        />
-                    </div>
+                    <ScrollReveal>
+                        <div className="relative top-10 overflow-hidden">
+                            <Image
+                                src='https://img.freepik.com/premium-psd/mobile-app-screen-mockup_772836-1135.jpg'
+                                alt="hero image"
+                                className="object-cover"
+                                layout="responsive"
+                                height={0}
+                                width={0}
+                            />
+                        </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </div>
