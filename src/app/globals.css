@@ -39,3 +39,165 @@ body {
   background: radial-gradient(rgba(130, 85, 300, 0.65), transparent 60%);
   background-repeat: no-repeat;
 }
+
+
+ul>li {
+  @apply !list-disc !ml-5
+}
+
+ol>li {
+  @apply !list-decimal !ml-5
+}
+
+/* General font */
+.about-content {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Headings */
+.about-content h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.about-content h2 {
+  font-size: 1.75em;
+  margin: 0.75em 0;
+}
+
+.about-content h3 {
+  font-size: 1.5em;
+  margin: 0.75em 0;
+}
+
+.about-content h4 {
+  font-size: 1.25em;
+  margin: 0.75em 0;
+}
+
+.about-content h5 {
+  font-size: 1em;
+  margin: 0.75em 0;
+}
+
+.about-content h6 {
+  font-size: 0.875em;
+  margin: 0.75em 0;
+}
+
+/* Paragraphs */
+.about-content p {
+  margin: 0 0 10px 0;
+}
+
+/* Lists (ul/ol) */
+.about-content ul,
+.about-content ol {
+  margin: 0 0 10px 20px;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.about-content li,
+.about-content li div {
+  /* fix div inside li */
+  display: list-item;
+  margin: 5px 0;
+  padding: 0;
+  list-style-type: inherit;
+  /* keep bullets/numbers */
+}
+
+/* Links */
+.about-content a {
+  color: #1a0dab;
+  text-decoration: underline;
+}
+
+/* Blockquotes */
+.about-content blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 10px;
+  margin: 10px 0;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+/* Tables */
+.about-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.about-content th,
+.about-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.about-content th {
+  background-color: #f2f2f2;
+}
+
+/* Fix div inside table cells */
+.about-content td div,
+.about-content th div {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Images */
+.about-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Code blocks */
+.about-content pre,
+.about-content code {
+  font-family: "Courier New", monospace;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Horizontal rules */
+.about-content hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+/* Highlights */
+.about-content mark {
+  background-color: yellow;
+}
+
+/* Text alignment */
+.about-content .text-left {
+  text-align: left;
+}
+
+.about-content .text-center {
+  text-align: center;
+}
+
+.about-content .text-right {
+  text-align: right;
+}
+
+.about-content .text-justify {
+  text-align: justify;
+}
