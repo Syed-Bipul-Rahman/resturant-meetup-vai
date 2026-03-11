@@ -48,7 +48,9 @@ export default function Navbar() {
         >
             <div className="container mx-auto flex items-center justify-between px-4">
                 {/* Logo */}
-                <Logo isScroll={isScroll} />
+                <Link href="/">
+                    <Logo isScroll={isScroll} />
+                </Link>
                 {/* menu  */}
                 <nav className="hidden lg:flex space-x-7">
                     {navLinks.map((link, index) => (
@@ -59,7 +61,7 @@ export default function Navbar() {
                         >
                             {link.title}
                             <span
-                                className={`absolute left-0 bottom-0 block w-full h-[3px] bg-[#2571ff] transition-transform duration-500 ease-in-out origin-right group-hover:origin-left
+                                className={`absolute left-0 bottom-0 block w-full h-[3px] bg-primary transition-transform duration-500 ease-in-out origin-right group-hover:origin-left
                                     ${pathname === link.href
                                         ? "scale-x-100"
                                         : "scale-x-0 group-hover:scale-x-100"
@@ -72,14 +74,14 @@ export default function Navbar() {
 
                 <div className="hidden lg:flex gap-8">
                     <button
-                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] w-max"
+                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-primary hover:bg-primary/90 [transition:0.3s] w-max"
                     >
                         Download App
                     </button>
                 </div>
 
                 <div className="lg:hidden">
-                    <button className="cursor-pointer hover:text-[#2571ff] [transition:0.3s] text-black" onClick={() => toggleMenu()}>
+                    <button className="cursor-pointer hover:text-primary [transition:0.3s] text-black" onClick={() => toggleMenu()}>
                         <RiMenu3Fill size={24} />
                     </button>
                 </div>
@@ -101,7 +103,7 @@ export default function Navbar() {
             >
                 <div className="flex justify-end items-center py-3 pr-5">
                     <button onClick={toggleMenu}>
-                        <RiCloseLargeFill className="border border-[#2571ff] rounded-full w-8 h-8 p-[6px] cursor-pointer hover:text-[#2571ff] [transition:0.3s]" />
+                        <RiCloseLargeFill className="border border-primary rounded-full w-8 h-8 p-[6px] cursor-pointer hover:text-primary [transition:0.3s]" />
                     </button>
                 </div>
                 <nav
@@ -116,7 +118,7 @@ export default function Navbar() {
                         >
                             {link.title}
                             <span
-                                className={`absolute left-0 bottom-0 block w-full h-[3px] bg-[#2571ff] transition-transform duration-500 ease-in-out origin-right group-hover:origin-left
+                                className={`absolute left-0 bottom-0 block w-full h-[3px] bg-primary transition-transform duration-500 ease-in-out origin-right group-hover:origin-left
                                     ${pathname === link.href
                                         ? "scale-x-100"
                                         : "scale-x-0 group-hover:scale-x-100"
@@ -126,7 +128,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <button
-                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-[#2571ff] hover:bg-[#2571ff]/90 [transition:0.3s] w-max"
+                        className="px-5 py-2 rounded-md cursor-pointer text-white text-sm bg-primary hover:bg-primary/90 [transition:0.3s] w-max"
                     >
                         Download App
                     </button>
