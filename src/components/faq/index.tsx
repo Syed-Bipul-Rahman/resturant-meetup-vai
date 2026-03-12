@@ -28,7 +28,7 @@ export default function FAQSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="relative overflow-hidden">
+        <section id='faq' className="relative overflow-hidden">
             <div className="py-24 max-w-3xl mx-auto px-6">
 
                 <div className="absolute w-[520px] h-[720px] -bottom-40 -right-82 hero-gradient -z-10"></div>
