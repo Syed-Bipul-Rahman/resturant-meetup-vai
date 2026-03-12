@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 
 export interface INavLink {
     title: string;
@@ -23,4 +24,11 @@ export interface IServiceCardProps {
     title: string;
     description: string;
     image: string;
+}
+
+
+export interface IStoreCardProps {
+    title: string;
+    src: string | StaticImageData;
+    textStyle?: string;
 }
