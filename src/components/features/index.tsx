@@ -83,7 +83,7 @@ export default function FeaturesSection() {
                 title="Discover the Power Within"
                 className='text-[#171717] text-center'
                 description="Our platform is engineered to supercharge your workflow. Enjoy features that adapt to your unique style, providing the perfect balance of simplicity and advanced functionality."
-                descriptionClass="text-center w-full lg:w-2/3 mx-auto"
+                descriptionClass="text-center w-full lg:w-1/2 mx-auto"
             />
             <div className="container mx-auto relative flex flex-col lg:flex-row items-center justify-between lg:gap-20 lg:pt-20 py-16 lg:pb-[120px]">
                 <div className="absolute right-0 w-[80%] h-[80%] bg-primary/5 rounded-full blur-3xl -z-10"></div>

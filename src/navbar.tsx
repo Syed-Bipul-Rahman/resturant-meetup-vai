@@ -10,6 +10,7 @@ export default function Navbar() {
     const pathname = usePathname();
     const [isScroll, setIsScroll] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState<string>("");
 
     const toggleMenu = () => setMenuOpen((prev) => !prev);
 
@@ -34,12 +35,66 @@ export default function Navbar() {
         },
     ];
 
+    // Determine which nav link is active
+    const isActive = (href: string | undefined) => {
+        if (!href) return false;
+        if (href.startsWith("#")) {
+            return activeSection === href;
+        }
+        if (href === "/") {
+            return pathname === "/" && activeSection === "";
+        }
+        return pathname === href;
+    };
 
+    // Track scroll position for navbar background
     useEffect(() => {
         const handleScroll = () => setIsScroll(window.scrollY > 0);
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Track which section is in view using IntersectionObserver
+    useEffect(() => {
+        if (pathname !== "/") {
+            setActiveSection("");
+            return;
+        }
+
+        const sectionIds = navLinks
+            .filter((l) => l.href?.startsWith("#"))
+            .map((l) => l.href!.slice(1));
+
+        const observers: IntersectionObserver[] = [];
+
+        sectionIds.forEach((id) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(`#${id}`);
+                    }
+                },
+                { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+            );
+
+            observer.observe(el);
+            observers.push(observer);
+        });
+
+        // Reset active section when scrolled back to top
+        const handleScroll = () => {
+            if (window.scrollY < 100) setActiveSection("");
+        };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            observers.forEach((o) => o.disconnect());
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [pathname]);
 
     return (
         <header
@@ -65,7 +120,7 @@ export default function Navbar() {
                             {link.title}
                             <span
                                 className={`absolute left-0 bottom-0 block w-full h-[3px] bg-primary transition-transform duration-500 ease-in-out origin-right group-hover:origin-left
-                                    ${pathname === link.href
+                                    ${isActive(link.href)
                                         ? "scale-x-100"
                                         : "scale-x-0 group-hover:scale-x-100"
                                     }
@@ -122,7 +177,7 @@ export default function Navbar() {
                             {link.title}
                             <span
                                 className={`absolute left-0 bottom-0 block w-full h-[3px] bg-primary transition-transform duration-500 ease-in-out origin-right group-hover:origin-left
-                                    ${pathname === link.href
+                                    ${isActive(link.href)
                                         ? "scale-x-100"
                                         : "scale-x-0 group-hover:scale-x-100"
                                     }
