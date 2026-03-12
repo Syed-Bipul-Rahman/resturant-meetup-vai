@@ -1,6 +1,5 @@
 "use client";
 
-import mobilePhoto from "../../assets/mobile-photo.png"
 import Title from '../reuseable/title'
 import Image from 'next/image'
 import ScrollReveal from "../animations/scroll-reveal"
@@ -38,7 +37,6 @@ export default function FeaturesSection() {
     };
 
     const sliderImages = [
-        mobilePhoto,
         slider_image_1,
         slider_image_2,
         slider_image_3,
@@ -48,18 +46,15 @@ export default function FeaturesSection() {
     ];
 
     return (
-        <div className="container mx-auto p-4">
+        <div id='features' className="container mx-auto p-4">
+            <Title
+                title="Where Imagination Meets Mastery!"
+                className='text-[#171717] text-center'
+                description="Step into a world of boundless creativity with Artifiex. Empowering artists, visionaries, and creators to craft extraordinary experiences, we provide the ultimate canvas for your ideas to shine. Let your masterpiece begin here."
+                descriptionClass="text-center w-2/3 mx-auto"
+            />
             <div className=" flex items-center flex-col lg:flex-row justify-center lg:gap-20 lg:pt-28 py-20 lg:pb-[156px] ">
-                {/* left  */}
-                <div className="flex-1 flex items-start justify-start flex-col relative xl:w-[666px] lg:w-auto">
-                    <Title
-                        title="Where Imagination Meets Mastery!"
-                        className='text-[#171717]'
-                        visible={false}
-                        description="Step into a world of boundless creativity with Artifiex. Empowering artists, visionaries, and creators to craft extraordinary experiences, we provide the ultimate canvas for your ideas to shine. Let your masterpiece begin here."
-                    />
-                    <button className='text-sm bg-primary hover:bg-primary/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max mt-5 lg:mt-[60px]'>GET STARTED</button>
-                </div>
+                <div className="flex-1 w-full"></div>
                 <div className="flex-1 w-full p-2">
                     {/* right side image slider */}
                     <ScrollReveal direction="fade-left">

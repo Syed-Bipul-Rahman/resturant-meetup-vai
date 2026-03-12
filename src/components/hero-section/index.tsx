@@ -18,6 +18,9 @@ export default function HeroSection() {
                         description="Step into a world of boundless creativity with Artifiex. Empowering artists, visionaries, and creators to craft extraordinary experiences, we provide the ultimate canvas for your ideas to shine. Let your masterpiece begin here."
                     />
                     <button className='text-sm bg-primary hover:bg-primary/90 [transition:0.3s] text-white px-5 py-2 rounded-md cursor-pointer lg:text-base w-max mt-5 lg:mt-[60px]'>GET STARTED</button>
+                    <div className="mt-5">
+                        <h2 className="text-base font-medium text-[#171717]">or, download the app</h2>
+                    </div>
                     <div className="flex gap-4 mt-5">
                         <AppStoreCard title="App Store" src={apple_icon} />
                         <AppStoreCard title="Google Play" src={playstore} />

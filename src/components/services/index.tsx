@@ -32,6 +32,7 @@ export default function ServicesSection() {
     ];
     return (
         <section
+            id='services'
             className="py-20 container mx-auto px-4">
             <Title title="Crafting Moments, Serving You"
                 className="text-center"

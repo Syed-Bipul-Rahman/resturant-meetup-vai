@@ -20,7 +20,10 @@ export default function Navbar() {
             title: "Services",
             href: "#services",
         },
-
+        {
+            title: "Features",
+            href: "#features",
+        },
         {
             title: "FAQ",
             href: "#faq"

@@ -31,4 +31,6 @@ export interface IStoreCardProps {
     title: string;
     src: string | StaticImageData;
     textStyle?: string;
+    iconStyle?: string;
+    titleStyle?: string;
 }

@@ -1,5 +1,6 @@
 "use client"
 import { IServiceCardProps } from "@/src/interface";
+import Image from "next/image";
 import { JSX, useState } from "react";
 
 
@@ -8,16 +9,18 @@ export default function ServiceCard({ title, description, image }: IServiceCardP
     return (
         <div className="bg-white rounded-md border border-gray-200 overflow-hidden flex flex-col w-full cursor-pointer ">
             <div className="w-full h-56 overflow-hidden">
-                <img
+                <Image
                     src={image}
                     alt={title}
-                    className={`w-full h-full object-cover transition-transform duration-500 ${hovered ? "scale-105" : "scale-100"
-                        }`}
+                    className="w-full h-full object-cover ![transition:0.3s] hover:scale-105"
+                    width={0}
+                    height={0}
+                    layout="responsive"
                 />
             </div>
 
             <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-gray-900 font-bold text-xl mb-3 tracking-tight font-serif">
+                <h3 className="text-gray-900 font-bold text-xl mb-3 tracking-tight">
                     {title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-1">

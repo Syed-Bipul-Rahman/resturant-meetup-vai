@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import { FaUtensils } from "react-icons/fa";
+import apple_icon from "./assets/apple-1.png";
+import playstore from "./assets/playstore.png";
 import { FaInstagram, FaTwitter, FaFacebook, FaYoutube } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Logo from './components/reuseable/logo';
+import AppStoreCard from './components/reuseable/app-store-card';
 
 export default function Footer() {
     const data = new Date();
@@ -30,6 +32,25 @@ export default function Footer() {
                                 <Icon size={20} />
                             </Link>
                         ))}
+                    </div>
+                    <div className='mt-10'>
+                        <h6 className="font-bold text-white mb-6">Download the app</h6>
+                        <div className="flex gap-4">
+                            <AppStoreCard
+                                title="App Store"
+                                iconStyle='w-7 h-7'
+                                textStyle='text-white'
+                                titleStyle='text-xs'
+                                src={apple_icon}
+                            />
+                            <AppStoreCard
+                                title="Google Play"
+                                iconStyle='w-7 h-7'
+                                textStyle='text-white'
+                                titleStyle='text-xs'
+                                src={playstore}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div>
