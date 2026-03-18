@@ -5,8 +5,8 @@ import { usePrivacyPolicyService } from "@/src/hooks/use-common";
 export default function PrivacyPolicyContent() {
     const { policies, loading } = usePrivacyPolicyService();
     return (
-        <div className="container mx-auto mt-12 px-4">
-            <div className="py-10">
+        <div className="lg:w-[55%] mx-auto py-6 lg:py-12 bg-white px-4">
+            <div>
                 {loading ? (
                     <div className="flex justify-center">
                         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>

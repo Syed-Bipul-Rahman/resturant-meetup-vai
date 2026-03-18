@@ -6,7 +6,7 @@ import MenuSection from "@/src/components/menu-section";
 import ServicesSection from "@/src/components/services";
 import LenisProvider from "@/src/components/animations/lenis-provider";
 import ScrollReveal from "@/src/components/animations/scroll-reveal";
-import FeaturesSection from "@/src/components/features";
+import RestaurantsSection from "@/src/components/restaurants";
 
 export default function Home() {
   return (
@@ -17,8 +17,8 @@ export default function Home() {
           <MenuSection />
         </ScrollReveal>
         <ServicesSection />
-        <FeaturesSection />
         <HowWorkSection />
+        <RestaurantsSection />
         <CustomerFeedbackSection />
         <FAQSection />
       </main>

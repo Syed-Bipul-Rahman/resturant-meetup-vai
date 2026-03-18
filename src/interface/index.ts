@@ -7,7 +7,7 @@ export interface INavLink {
 
 export interface ITitleProps {
     title: string;
-    description: string;
+    description?: string;
     className?: string;
     descriptionClass?: string;
     visible?: boolean;

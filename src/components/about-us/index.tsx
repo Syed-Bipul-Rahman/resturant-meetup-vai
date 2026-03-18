@@ -14,8 +14,8 @@ export default function AboutUsContent() {
     const { abouts, loading } = useAboutUsService();
 
     return (
-        <div className="container mx-auto py-12 bg-white px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="lg:w-[55%] mx-auto py-6 lg:py-12 bg-white px-4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {stats.map((stat, index) => (
                     <div key={index} className="flex flex-col items-center p-6 border border-gray-100 rounded-md bg-gray-50/50">
                         <div className="text-primary mb-4">{stat.icon}</div>
@@ -23,8 +23,8 @@ export default function AboutUsContent() {
                         <div className="text-gray-500 font-medium">{stat.label}</div>
                     </div>
                 ))}
-            </div>
-            <div className="py-10">
+            </div> */}
+            <div>
                 {loading ? (
                     <div className="flex justify-center">
                         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>

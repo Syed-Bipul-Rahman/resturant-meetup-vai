@@ -14,7 +14,7 @@ export default function Navbar() {
 
     const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-    // Navigation links
+
     const navLinks: INavLink[] = [
         { title: "Home", href: "/" },
         {
@@ -22,12 +22,16 @@ export default function Navbar() {
             href: "#services",
         },
         {
-            title: "Features",
-            href: "#features",
+            title: "How It Works",
+            href: "#howitworks"
         },
         {
-            title: "FAQ",
-            href: "#faq"
+            title: "Restaurants",
+            href: "#restaurants"
+        },
+        {
+            title: "Safety",
+            href: "/safety-and-guidelines"
         },
         {
             title: "About us",
@@ -35,7 +39,6 @@ export default function Navbar() {
         },
     ];
 
-    // Determine which nav link is active
     const isActive = (href: string | undefined) => {
         if (!href) return false;
         if (href.startsWith("#")) {
@@ -47,7 +50,7 @@ export default function Navbar() {
         return pathname === href;
     };
 
-    // Track scroll position for navbar background
+
     useEffect(() => {
         const handleScroll = () => setIsScroll(window.scrollY > 0);
         window.addEventListener("scroll", handleScroll);
@@ -148,7 +151,7 @@ export default function Navbar() {
             {/* Mobile Overlay */}
             {menuOpen && (
                 <div
-                    className="fixed w-full h-screen inset-0 bg-black bg-opacity-75 z-40"
+                    className="fixed w-full h-screen inset-0 bg-black/75 z-40"
                     onClick={toggleMenu}
                 ></div>
             )}

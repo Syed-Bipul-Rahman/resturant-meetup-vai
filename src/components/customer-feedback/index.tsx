@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -52,30 +52,30 @@ const testimonials = [
 
 export default function CustomerFeedbackSection() {
     const sliderRef = useRef<Slider>(null);
-
+    const [slides, setSlides] = useState(2);
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: slides,
         slidesToScroll: 1,
         arrows: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
     };
 
+    useEffect(() => {
+        const updateSlides = () => {
+            if (window.innerWidth < 768) {
+                setSlides(1);
+            } else {
+                setSlides(2);
+            }
+        };
+
+        updateSlides();
+        window.addEventListener("resize", updateSlides);
+
+        return () => window.removeEventListener("resize", updateSlides);
+    }, []);
     return (
         <section className="py-16 md:py-24 bg-[#f8f7fb]">
             <div className="container mx-auto px-4">
@@ -107,10 +107,10 @@ export default function CustomerFeedbackSection() {
                         </ScrollReveal>
                     </div>
 
-                    <div className="lg:col-span-8 -mx-4">
+                    <div className="lg:col-span-8 overflow-hidden">
                         <Slider ref={sliderRef} {...settings}>
                             {testimonials.map((testimonial) => (
-                                <div key={testimonial.id} className="px-4">
+                                <div key={testimonial.id} className="px-2 md:px-4">
                                     <div className="bg-white rounded-xl border border-[#E5E7EB] p-8 h-full min-h-[280px] flex flex-col">
                                         <div className="flex items-center gap-4 mb-6">
                                             <div className="relative w-12 h-12 rounded-full overflow-hidden">

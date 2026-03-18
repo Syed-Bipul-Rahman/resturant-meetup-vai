@@ -7,20 +7,24 @@ import Title from '../reuseable/title';
 import ScrollReveal from '../animations/scroll-reveal';
 const faqs = [
     {
-        question: 'How do I join a meetup?',
-        answer: 'Browse the upcoming meetups on our platform, select one you like, and click "Join Meetup". You will be guided through the reservation and payment process.',
+        question: "How do I meet new people on Glicen?",
+        answer: "Explore profiles, start chats, and send invites to connect. You can plan a meetup at a restaurant directly within the app.",
     },
     {
-        question: 'Are there any membership fees?',
-        answer: 'Basic membership is free! You only pay for the specific meetups or events you choose to attend.',
+        question: "Can I make restaurant reservations through the app?",
+        answer: "Yes! You can discover restaurants, check availability, reserve tables instantly, and manage all your bookings in one place.",
     },
     {
-        question: 'Can I host my own meetup?',
-        answer: 'Yes! Certified foodies and restaurant owners can apply to host events through our "Host" dashboard.',
+        question: "How do I send invites or offers?",
+        answer: "Use the app to create invitations or special dining offers, send them to friends or matches, and track responses in real time.",
     },
     {
-        question: 'What is the refund policy?',
-        answer: 'Refunds are available up to 48 hours before the event starts. After that, we can help you transfer your ticket to someone else.',
+        question: "Is payment secure on Glicen?",
+        answer: "Absolutely. All payments are encrypted and handled through trusted payment gateways, giving you a safe and seamless checkout experience.",
+    },
+    {
+        question: "Can restaurants use Glicen to manage bookings?",
+        answer: "Yes! Restaurants can create profiles, publish offers, manage reservations, and connect directly with customers looking to dine out.",
     },
 ];
 
@@ -38,7 +42,7 @@ export default function FAQSection() {
                 <ScrollReveal>
                     <Title
                         title="Frequently Asked Questions"
-                        description="Everything you need to know about RestoMeet."
+                        description="Everything you need to know about Glicen."
                         className="text-center"
                         descriptionClass="text-center"
                     />
@@ -50,7 +54,7 @@ export default function FAQSection() {
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                 className="w-full flex items-center justify-between p-6 text-left transition-colors cursor-pointer"
                             >
-                                <span className="font-bold text-lg">{faq.question}</span>
+                                <span className="font-bold text-md lg:text-lg">{faq.question}</span>
                                 <FiChevronDown
                                     className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
                                     size={20}

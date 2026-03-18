@@ -79,7 +79,7 @@ export default function ScrollReveal({
   duration = 0.8,
   direction = "fade-up",
   once = true,
-  className,
+  className = "",
 }: IScrollRevealProps) {
   const { initial, animate } = variants[direction];
   const easing = easings[direction];
@@ -90,14 +90,16 @@ export default function ScrollReveal({
       : { duration, ease: easing, delay };
 
   return (
-    <motion.div
-      initial={initial}
-      whileInView={animate}
-      viewport={{ once, margin: "-100px" }}
-      transition={transition}
-      className={className}
-    >
-      {children}
-    </motion.div>
+    <div className="!overflow-hidden lg:!overflow-visible w-full h-full">
+      <motion.div
+        initial={initial}
+        whileInView={animate}
+        viewport={{ once, margin: "-100px" }}
+        transition={transition}
+        className={className}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }
